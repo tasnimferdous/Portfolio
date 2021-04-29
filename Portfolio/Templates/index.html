@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <h5>Hello, {{user.username}}</h5>
+    <a href="accounts/logout">Sign out</a><br>
+    <a href="themes/template">Templates</a>
+{% else %}
+    <a href="accounts/login">Sign in</a><br>
+    <a href="accounts/register">Sign up</a><br>
+    <a href="themes/template">Templates</a>
+
+{% endif %}
+
+{% endblock %}
